@@ -1,0 +1,52 @@
+@model List<B5.Models.PortfolioItem>
+
+@{
+    var currentPage = ViewBag.CurrentPage as int? ?? 1;
+    var totalPages = ViewBag.TotalPages as int? ?? 1;
+}
+
+<h2 style="text-align:center;">MY PORTFOLIO</h2>
+<hr />
+<div style="text-align:center; margin-bottom:20px;">
+    <span style="margin:0 10px; color:teal; font-weight:bold;">All</span>
+    <span style="margin:0 10px;">Web App</span>
+    <span style="margin:0 10px;">UI/UX</span>
+    <span style="margin:0 10px;">Graphics Design</span>
+    <span style="margin:0 10px;">Mobile App</span>
+    <span style="margin:0 10px;">Branding</span>
+    <span style="margin:0 10px;">Marketing</span>
+</div>
+
+<table style="width:100%; border-spacing:20px;">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        if (i % 3 == 0)
+        {
+            <tr>
+        }
+
+        <td style="background-color: #8BC34A; width: 30%; height: 150px; text-align:center; color:white; font-size:20px;">
+            @Model[i].Title
+        </td>
+
+        if ((i + 1) % 3 == 0 || i == Model.Count - 1)
+        {
+            </tr>
+        }
+    }
+</table>
+
+<!-- Pagination -->
+<div style="text-align:center; margin-top: 30px;">
+    @for (int i = 1; i <= totalPages; i++)
+    {
+        if (i == currentPage)
+        {
+            <strong style="margin: 0 5px;">@i</strong>
+        }
+        else
+        {
+            <a href="/Portfolio/Index?page=@i" style="margin: 0 5px;">@i</a>
+        }
+    }
+</div>

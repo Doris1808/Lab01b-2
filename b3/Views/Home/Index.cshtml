@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông Tin Sinh Viên</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+        }
+
+        table {
+            width: 900px;
+            border-collapse: collapse;
+            margin: 30px auto;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        th {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .image-cell {
+            width: 250px;
+            text-align: center;
+        }
+
+            .image-cell img {
+                width: 100%;
+                height: auto;
+            }
+
+        .label {
+            font-weight: bold;
+            width: 150px;
+        }
+
+        .value {
+            font-weight: bold;
+        }
+
+        td[colspan="3"] {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- Dòng tiêu đề -->
+        <tr>
+            <th colspan="4">THÔNG TIN SINH VIÊN</th>
+        </tr>
+
+        <!-- Dòng hình ảnh + Họ tên -->
+        <tr>
+            <td rowspan="4" class="image-cell">
+                <img src="https://i.imgur.com/Sd5YQ0N.png" alt="Sinh viên">
+            </td>
+            <td class="label">HỌ VÀ TÊN</td>
+            <td colspan="2" class="value">Nguyễn Văn An</td>
+        </tr>
+
+        <!-- MSSV + Giới tính -->
+        <tr>
+            <td class="label">MÃ SỐ SINH VIÊN</td>
+            <td class="value">19DH110110</td>
+            <td class="label">GIỚI TÍNH<br>NAM</td>
+        </tr>
+
+        <!-- Email + Số điện thoại -->
+        <tr>
+            <td class="label">EMAIL</td>
+            <td class="value">an@gmail.com</td>
+            <td class="label">SỐ ĐIỆN THOẠI<br>0122333444</td>
+        </tr>
+
+        <!-- Sở thích -->
+        <tr>
+            <td class="label">SỞ THÍCH</td>
+            <td colspan="3" class="value">VIẾT CHƯƠNG TRÌNH</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 - Table Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            vertical-align: top;
+            padding: 20px;
+        }
+
+        .left-box {
+            background-color: #ccc;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        .right-box h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .right-box p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid black;
+            background-color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #f0f0f0;
+            }
+    </style>
+</head>
+<body>
+
+    <h2>Bài 4: Sử dụng thẻ table xây dựng trang web sau:</h2>
+
+    <table>
+        <tr>
+            <!-- Cột trái -->
+            <td class="left-box">
+                Học Web Chuẩn
+            </td>
+
+            <!-- Cột phải -->
+            <td class="right-box">
+                <h2>VESTIBULUM ULLAMCORPER UT LEO QUIS</h2>
+                <p>Aenean facilisis lectus ante, ut rutrum eros convallis et.</p>
+                <p>Vestibulum ullamcorper ut leo quis tristique. Donec in erat commodo, pharetra purus ac, consectetur lacus. Suspendisse odio sapien, egestas at ex sit amet, molestie sagittis est.</p>
+                <p>In id purus imperdiet nisl accumsan scelerisque. Donec nec justo sed enim dapibus rhoncus. Morbi sed elit vitae metus ullamcorper efficitur.</p>
+                <p>Fusce aliquam magna id ipsum ultricies interdum. Maecenas nibh risus,</p>
+                <button class="btn">DETAIL</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
